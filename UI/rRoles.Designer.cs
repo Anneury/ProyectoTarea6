@@ -248,7 +248,7 @@ namespace ProyectoTarea6.UI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rRoles";
-            this.Text = "rRoles";
+            this.Text = "Registro Roles";
             this.Load += new System.EventHandler(this.rRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RolIdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesDataGridView)).EndInit();

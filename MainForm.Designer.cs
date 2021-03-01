@@ -54,6 +54,7 @@ namespace ProyectoTarea6
             this.RegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,6 @@ namespace ProyectoTarea6
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -264,6 +264,12 @@ namespace ProyectoTarea6
             this.RolesToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.RolesToolStripMenuItem.Text = "Roles";
             // 
+            // PermisosToolStripMenuItem
+            // 
+            this.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem";
+            this.PermisosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.PermisosToolStripMenuItem.Text = "Permisos";
+            // 
             // ConsultasToolStripMenuItem
             // 
             this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
@@ -311,12 +317,6 @@ namespace ProyectoTarea6
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
-            // PermisosToolStripMenuItem
-            // 
-            this.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem";
-            this.PermisosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
-            this.PermisosToolStripMenuItem.Text = "Permisos";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -326,7 +326,7 @@ namespace ProyectoTarea6
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Main Form";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

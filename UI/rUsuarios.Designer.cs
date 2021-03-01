@@ -280,7 +280,7 @@ namespace ProyectoTarea6.UI
             this.Controls.Add(this.UsuarioIdNumericUpDown);
             this.Controls.Add(this.label1);
             this.Name = "rUsuarios";
-            this.Text = "rUsuarios";
+            this.Text = "Registro Usuarios";
             this.Load += new System.EventHandler(this.rUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioIdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
