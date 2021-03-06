@@ -67,7 +67,7 @@ namespace ProyectoTarea6.UI
             // 
             this.DescripcionRolTextBox.Location = new System.Drawing.Point(13, 96);
             this.DescripcionRolTextBox.Name = "DescripcionRolTextBox";
-            this.DescripcionRolTextBox.Size = new System.Drawing.Size(335, 27);
+            this.DescripcionRolTextBox.Size = new System.Drawing.Size(429, 27);
             this.DescripcionRolTextBox.TabIndex = 3;
             // 
             // label2
@@ -92,7 +92,7 @@ namespace ProyectoTarea6.UI
             // 
             this.RolIdNumericUpDown.Location = new System.Drawing.Point(13, 36);
             this.RolIdNumericUpDown.Name = "RolIdNumericUpDown";
-            this.RolIdNumericUpDown.Size = new System.Drawing.Size(125, 27);
+            this.RolIdNumericUpDown.Size = new System.Drawing.Size(250, 27);
             this.RolIdNumericUpDown.TabIndex = 6;
             // 
             // label4
@@ -109,7 +109,7 @@ namespace ProyectoTarea6.UI
             this.PermisoIdComboBox.FormattingEnabled = true;
             this.PermisoIdComboBox.Location = new System.Drawing.Point(13, 210);
             this.PermisoIdComboBox.Name = "PermisoIdComboBox";
-            this.PermisoIdComboBox.Size = new System.Drawing.Size(125, 28);
+            this.PermisoIdComboBox.Size = new System.Drawing.Size(186, 28);
             this.PermisoIdComboBox.TabIndex = 8;
             // 
             // EsAsignadoCheckBox
@@ -206,7 +206,7 @@ namespace ProyectoTarea6.UI
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaDateTimePicker.Location = new System.Drawing.Point(13, 152);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(335, 27);
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(429, 27);
             this.FechaDateTimePicker.TabIndex = 17;
             // 
             // MyErrorProvider
@@ -216,7 +216,7 @@ namespace ProyectoTarea6.UI
             // BuscarButton
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(145, 33);
+            this.BuscarButton.Location = new System.Drawing.Point(269, 36);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(94, 29);
             this.BuscarButton.TabIndex = 18;

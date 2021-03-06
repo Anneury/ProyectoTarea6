@@ -199,9 +199,9 @@ namespace ProyectoTarea6.UI
             // NuevoButton
             // 
             this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
-            this.NuevoButton.Location = new System.Drawing.Point(193, 254);
+            this.NuevoButton.Location = new System.Drawing.Point(205, 254);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(137, 44);
+            this.NuevoButton.Size = new System.Drawing.Size(122, 44);
             this.NuevoButton.TabIndex = 21;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -213,7 +213,7 @@ namespace ProyectoTarea6.UI
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.Location = new System.Drawing.Point(384, 254);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(137, 44);
+            this.GuardarButton.Size = new System.Drawing.Size(122, 44);
             this.GuardarButton.TabIndex = 22;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -223,9 +223,9 @@ namespace ProyectoTarea6.UI
             // EliminarButton
             // 
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
-            this.EliminarButton.Location = new System.Drawing.Point(570, 254);
+            this.EliminarButton.Location = new System.Drawing.Point(559, 254);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(137, 44);
+            this.EliminarButton.Size = new System.Drawing.Size(122, 44);
             this.EliminarButton.TabIndex = 23;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -257,7 +257,7 @@ namespace ProyectoTarea6.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(894, 323);
+            this.ClientSize = new System.Drawing.Size(894, 318);
             this.Controls.Add(this.FechaCreacionDateTimePicker);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
