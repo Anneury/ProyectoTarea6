@@ -182,7 +182,7 @@ namespace ProyectoTarea6.UI.Consultas
             this.InactivoRadioButton.Size = new System.Drawing.Size(82, 24);
             this.InactivoRadioButton.TabIndex = 2;
             this.InactivoRadioButton.TabStop = true;
-            this.InactivoRadioButton.Text = "inactivo";
+            this.InactivoRadioButton.Text = "Inactivo";
             this.InactivoRadioButton.UseVisualStyleBackColor = true;
             // 
             // ActivoRadioButton
@@ -231,7 +231,7 @@ namespace ProyectoTarea6.UI.Consultas
             this.Controls.Add(this.UsarFechaCheckBox);
             this.MinimumSize = new System.Drawing.Size(985, 592);
             this.Name = "cRoles";
-            this.Text = "cRoles";
+            this.Text = "Consultar Roles";
             ((System.ComponentModel.ISupportInitialize)(this.DatosDataGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

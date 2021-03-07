@@ -116,9 +116,9 @@ namespace ProyectoTarea6.UI.Registros
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 20);
+            this.label3.Size = new System.Drawing.Size(143, 20);
             this.label3.TabIndex = 9;
-            this.label3.Text = "DescripcionPermiso";
+            this.label3.Text = "Descripción Permiso";
             // 
             // rPermisos
             // 

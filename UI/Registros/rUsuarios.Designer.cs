@@ -138,7 +138,7 @@ namespace ProyectoTarea6.UI
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 20);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Fecha Creacion";
+            this.label6.Text = "Fecha Creación";
             // 
             // ConfirmarClaveTextBox
             // 
