@@ -11,12 +11,6 @@ namespace ProyectoTarea6.UI
         {
             InitializeComponent();
         }
-        private void rUsuarios_Load(object sender, EventArgs e)
-        {
-            RolComboBox.DataSource = RolesBLL.GetRoles();
-            RolComboBox.DisplayMember = "DescripcionRol";
-            RolComboBox.ValueMember = "RolID";
-        }
         public void Limpiar()
         {
             UsuarioIdNumericUpDown.Value = 0;
@@ -54,6 +48,12 @@ namespace ProyectoTarea6.UI
             usuario.NombreUsuario = NombreTextBox.Text;
 
             return usuario;
+        }
+        private void rUsuarios_Load(object sender, EventArgs e)
+        {
+            RolComboBox.DataSource = RolesBLL.GetRoles();
+            RolComboBox.DisplayMember = "DescripcionRol";
+            RolComboBox.ValueMember = "RolID";
         }
         private bool Validar()
         {
