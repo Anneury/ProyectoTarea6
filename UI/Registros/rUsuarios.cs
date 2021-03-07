@@ -113,6 +113,31 @@ namespace ProyectoTarea6.UI
 
             return paso;
         }
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            int id;
+            Usuarios usuario = new Usuarios();
+            int.TryParse(UsuarioIdNumericUpDown.Text, out id);
+
+            Limpiar();
+
+            usuario = UsuariosBLL.Buscar(id);
+
+            if (usuario != null)
+            {
+                MessageBox.Show("Persona Encotrada", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LlenaCampos(usuario);
+            }
+            else
+            {
+                MessageBox.Show("Persona no Encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             Usuarios usuarios;
@@ -134,12 +159,6 @@ namespace ProyectoTarea6.UI
                 MessageBox.Show("No se pudo guardar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void NuevoButton_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             MyErrorProvider.Clear();
@@ -155,25 +174,5 @@ namespace ProyectoTarea6.UI
                 MyErrorProvider.SetError(UsuarioIdNumericUpDown, "No se puede eliminar una persona que no existe");
         }
 
-        private void BuscarButton_Click(object sender, EventArgs e)
-        {
-            int id;
-            Usuarios usuario = new Usuarios();
-            int.TryParse(UsuarioIdNumericUpDown.Text, out id);
-
-            Limpiar();
-
-            usuario = UsuariosBLL.Buscar(id);
-
-            if (usuario != null)
-            {
-                MessageBox.Show("Persona Encotrada", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LlenaCampos(usuario);
-            }
-            else
-            {
-                MessageBox.Show("Persona no Encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
     }
 }

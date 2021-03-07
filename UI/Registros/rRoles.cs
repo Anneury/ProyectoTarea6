@@ -79,6 +79,25 @@ namespace ProyectoTarea6.UI
             Roles roles = RolesBLL.Buscar((int)RolIdNumericUpDown.Value);
             return (roles != null);
         }
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            Roles roles;
+            int id;
+            int.TryParse(RolIdNumericUpDown.Text, out id);
+
+            Limpiar();
+
+            roles = RolesBLL.Buscar(id);
+
+            if (roles != null)
+            {
+                MessageBox.Show("Rol encontrado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LlenaCampo(roles);
+            }
+            else
+                MessageBox.Show("Este Rol no existe, prueba buscar otro!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+        }
         private void AgregarButton_Click(object sender, EventArgs e)
         {
             if (DetallesDataGridView.DataSource != null)
@@ -169,26 +188,6 @@ namespace ProyectoTarea6.UI
             }
             else
                 MessageBox.Show("Este Rol no existe en la base de datos, prueba a eliminar otro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        }
-
-        private void BuscarButton_Click(object sender, EventArgs e)
-        {
-            Roles roles;
-            int id;
-            int.TryParse(RolIdNumericUpDown.Text, out id);
-
-            Limpiar();
-
-            roles = RolesBLL.Buscar(id);
-
-            if (roles != null)
-            {
-                MessageBox.Show("Rol encontrado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LlenaCampo(roles);
-            }
-            else
-                MessageBox.Show("Este Rol no existe, prueba buscar otro!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
         }
 
