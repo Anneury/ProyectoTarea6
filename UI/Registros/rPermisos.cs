@@ -3,7 +3,7 @@ using ProyectoTarea6.BLL;
 using System;
 using System.Windows.Forms;
 
-namespace PrimeraPruebaTarea5.UI.Registros
+namespace ProyectoTarea6.UI.Registros
 {
     public partial class rPermisos : Form
     {
@@ -72,5 +72,7 @@ namespace PrimeraPruebaTarea5.UI.Registros
             else
                 MessageBox.Show("Este Permiso no existe, prueba buscar otro!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+
+ 
     }
 }

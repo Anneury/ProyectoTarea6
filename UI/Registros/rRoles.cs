@@ -17,7 +17,9 @@ namespace ProyectoTarea6.UI
 
         private void rRoles_Load(object sender, EventArgs e)
         {
-
+            PermisoIdComboBox.DataSource = PermisosBLL.GetPermisos();
+            PermisoIdComboBox.DisplayMember = "PermisoID";
+            PermisoIdComboBox.ValueMember = "DescripcionPermiso";
         }
         public void CargarGrid()
         {

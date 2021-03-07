@@ -1,5 +1,5 @@
 ﻿
-namespace PrimeraPruebaTarea5.UI.Registros
+namespace ProyectoTarea6.UI.Registros
 {
     partial class rPermisos
     {

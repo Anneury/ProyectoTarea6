@@ -62,6 +62,7 @@ namespace ProyectoTarea6
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -272,6 +273,8 @@ namespace ProyectoTarea6
             // 
             // ConsultasToolStripMenuItem
             // 
+            this.ConsultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ConsultarRolesToolStripMenuItem});
             this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
             this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.ConsultasToolStripMenuItem.Text = "&Consultas";
@@ -316,6 +319,12 @@ namespace ProyectoTarea6
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
+            // 
+            // ConsultarRolesToolStripMenuItem
+            // 
+            this.ConsultarRolesToolStripMenuItem.Name = "ConsultarRolesToolStripMenuItem";
+            this.ConsultarRolesToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.ConsultarRolesToolStripMenuItem.Text = "Consultar Roles";
             // 
             // MainForm
             // 
@@ -368,6 +377,7 @@ namespace ProyectoTarea6
         private System.Windows.Forms.ToolStripMenuItem UsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PermisosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ConsultarRolesToolStripMenuItem;
     }
 }
 

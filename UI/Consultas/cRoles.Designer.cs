@@ -34,17 +34,17 @@ namespace ProyectoTarea6.UI.Consultas
             this.BuscarButton = new System.Windows.Forms.Button();
             this.ImprimirButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.FiltroCombobox = new System.Windows.Forms.ComboBox();
+            this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.FechaDesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.FechaHastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.CriterioTextBox = new System.Windows.Forms.TextBox();
-            this.TodosRadioButton = new System.Windows.Forms.RadioButton();
-            this.ActivoRadioButton = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FechaHastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.FechaDesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.InactivoRadioButton = new System.Windows.Forms.RadioButton();
+            this.ActivoRadioButton = new System.Windows.Forms.RadioButton();
+            this.TodosRadioButton = new System.Windows.Forms.RadioButton();
+            this.CriterioTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DatosDataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,6 +78,7 @@ namespace ProyectoTarea6.UI.Consultas
             this.BuscarButton.TabIndex = 2;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // ImprimirButton
             // 
@@ -97,17 +98,22 @@ namespace ProyectoTarea6.UI.Consultas
             this.label1.TabIndex = 4;
             this.label1.Text = "Filtro";
             // 
-            // FiltroCombobox
+            // FiltroComboBox
             // 
-            this.FiltroCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FiltroCombobox.FormattingEnabled = true;
-            this.FiltroCombobox.Location = new System.Drawing.Point(61, 71);
-            this.FiltroCombobox.Name = "FiltroCombobox";
-            this.FiltroCombobox.Size = new System.Drawing.Size(164, 28);
-            this.FiltroCombobox.TabIndex = 5;
+            this.FiltroComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.FiltroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
+            "Rol Id",
+            "Descripcion Rol"});
+            this.FiltroComboBox.Location = new System.Drawing.Point(61, 71);
+            this.FiltroComboBox.Name = "FiltroComboBox";
+            this.FiltroComboBox.Size = new System.Drawing.Size(164, 28);
+            this.FiltroComboBox.TabIndex = 5;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.FechaHastaDateTimePicker);
@@ -118,33 +124,15 @@ namespace ProyectoTarea6.UI.Consultas
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
+            // label3
             // 
-            this.groupBox2.Controls.Add(this.InactivoRadioButton);
-            this.groupBox2.Controls.Add(this.ActivoRadioButton);
-            this.groupBox2.Controls.Add(this.TodosRadioButton);
-            this.groupBox2.Location = new System.Drawing.Point(727, 9);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(122, 90);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Es Activo?";
-            // 
-            // FechaDesdeDateTimePicker
-            // 
-            this.FechaDesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaDesdeDateTimePicker.Location = new System.Drawing.Point(76, 20);
-            this.FechaDesdeDateTimePicker.Name = "FechaDesdeDateTimePicker";
-            this.FechaDesdeDateTimePicker.Size = new System.Drawing.Size(129, 27);
-            this.FechaDesdeDateTimePicker.TabIndex = 0;
-            // 
-            // FechaHastaDateTimePicker
-            // 
-            this.FechaHastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaHastaDateTimePicker.Location = new System.Drawing.Point(310, 20);
-            this.FechaHastaDateTimePicker.Name = "FechaHastaDateTimePicker";
-            this.FechaHastaDateTimePicker.Size = new System.Drawing.Size(127, 27);
-            this.FechaHastaDateTimePicker.TabIndex = 1;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(231, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Hasta";
             // 
             // label2
             // 
@@ -155,43 +143,36 @@ namespace ProyectoTarea6.UI.Consultas
             this.label2.TabIndex = 2;
             this.label2.Text = "Desde";
             // 
-            // label3
+            // FechaHastaDateTimePicker
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(231, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Hasta";
+            this.FechaHastaDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FechaHastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaHastaDateTimePicker.Location = new System.Drawing.Point(310, 20);
+            this.FechaHastaDateTimePicker.Name = "FechaHastaDateTimePicker";
+            this.FechaHastaDateTimePicker.Size = new System.Drawing.Size(127, 27);
+            this.FechaHastaDateTimePicker.TabIndex = 1;
             // 
-            // CriterioTextBox
+            // FechaDesdeDateTimePicker
             // 
-            this.CriterioTextBox.Location = new System.Drawing.Point(245, 71);
-            this.CriterioTextBox.Name = "CriterioTextBox";
-            this.CriterioTextBox.Size = new System.Drawing.Size(467, 27);
-            this.CriterioTextBox.TabIndex = 8;
+            this.FechaDesdeDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.FechaDesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaDesdeDateTimePicker.Location = new System.Drawing.Point(76, 20);
+            this.FechaDesdeDateTimePicker.Name = "FechaDesdeDateTimePicker";
+            this.FechaDesdeDateTimePicker.Size = new System.Drawing.Size(129, 27);
+            this.FechaDesdeDateTimePicker.TabIndex = 0;
             // 
-            // TodosRadioButton
+            // groupBox2
             // 
-            this.TodosRadioButton.AutoSize = true;
-            this.TodosRadioButton.Location = new System.Drawing.Point(6, 20);
-            this.TodosRadioButton.Name = "TodosRadioButton";
-            this.TodosRadioButton.Size = new System.Drawing.Size(70, 24);
-            this.TodosRadioButton.TabIndex = 0;
-            this.TodosRadioButton.TabStop = true;
-            this.TodosRadioButton.Text = "Todos";
-            this.TodosRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // ActivoRadioButton
-            // 
-            this.ActivoRadioButton.AutoSize = true;
-            this.ActivoRadioButton.Location = new System.Drawing.Point(6, 42);
-            this.ActivoRadioButton.Name = "ActivoRadioButton";
-            this.ActivoRadioButton.Size = new System.Drawing.Size(72, 24);
-            this.ActivoRadioButton.TabIndex = 1;
-            this.ActivoRadioButton.TabStop = true;
-            this.ActivoRadioButton.Text = "Activo";
-            this.ActivoRadioButton.UseVisualStyleBackColor = true;
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Controls.Add(this.InactivoRadioButton);
+            this.groupBox2.Controls.Add(this.ActivoRadioButton);
+            this.groupBox2.Controls.Add(this.TodosRadioButton);
+            this.groupBox2.Location = new System.Drawing.Point(727, 9);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(122, 90);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Es Activo?";
             // 
             // InactivoRadioButton
             // 
@@ -204,6 +185,36 @@ namespace ProyectoTarea6.UI.Consultas
             this.InactivoRadioButton.Text = "inactivo";
             this.InactivoRadioButton.UseVisualStyleBackColor = true;
             // 
+            // ActivoRadioButton
+            // 
+            this.ActivoRadioButton.AutoSize = true;
+            this.ActivoRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.ActivoRadioButton.Name = "ActivoRadioButton";
+            this.ActivoRadioButton.Size = new System.Drawing.Size(72, 24);
+            this.ActivoRadioButton.TabIndex = 1;
+            this.ActivoRadioButton.TabStop = true;
+            this.ActivoRadioButton.Text = "Activo";
+            this.ActivoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // TodosRadioButton
+            // 
+            this.TodosRadioButton.AutoSize = true;
+            this.TodosRadioButton.Location = new System.Drawing.Point(6, 20);
+            this.TodosRadioButton.Name = "TodosRadioButton";
+            this.TodosRadioButton.Size = new System.Drawing.Size(70, 24);
+            this.TodosRadioButton.TabIndex = 0;
+            this.TodosRadioButton.TabStop = true;
+            this.TodosRadioButton.Text = "Todos";
+            this.TodosRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // CriterioTextBox
+            // 
+            this.CriterioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CriterioTextBox.Location = new System.Drawing.Point(245, 71);
+            this.CriterioTextBox.Name = "CriterioTextBox";
+            this.CriterioTextBox.Size = new System.Drawing.Size(467, 27);
+            this.CriterioTextBox.TabIndex = 8;
+            // 
             // cRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -212,12 +223,13 @@ namespace ProyectoTarea6.UI.Consultas
             this.Controls.Add(this.CriterioTextBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.FiltroCombobox);
+            this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ImprimirButton);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.DatosDataGrid);
             this.Controls.Add(this.UsarFechaCheckBox);
+            this.MinimumSize = new System.Drawing.Size(985, 592);
             this.Name = "cRoles";
             this.Text = "cRoles";
             ((System.ComponentModel.ISupportInitialize)(this.DatosDataGrid)).EndInit();
@@ -237,7 +249,7 @@ namespace ProyectoTarea6.UI.Consultas
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Button ImprimirButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox FiltroCombobox;
+        private System.Windows.Forms.ComboBox FiltroComboBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
