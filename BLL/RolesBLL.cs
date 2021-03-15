@@ -58,7 +58,7 @@ namespace ProyectoTarea6.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM RolesDetalle where IdRol={roles.RolID}");
+                contexto.Database.ExecuteSqlRaw($"Delete FROM RolesDetalle where RolID={roles.RolID}");
                 foreach (var anterior in roles.Detalle)
                 {
                     contexto.Entry(anterior).State = EntityState.Added;

@@ -23,7 +23,40 @@ namespace ProyectoTarea6.UI.Consultas
         {
             var listado = new List<Roles>();
 
-            //ninguno seleccionado
+            if (!string.IsNullOrEmpty(CriterioTextBox.Text))
+            {
+                switch (FiltroComboBox.SelectedIndex)
+                {
+                    case 0:
+                        listado = RolesBLL.GetList(e => e.RolID == Conversiones.AEntero(CriterioTextBox.Text));
+                        break;
+
+                    case 1:
+                        listado = RolesBLL.GetList(e => e.DescripcionRol.Contains(CriterioTextBox.Text));
+                        break;
+
+                }
+            }
+            else
+            {
+                listado = RolesBLL.GetList(c => true);
+            }
+
+            if (UsarFechaCheckBox.Checked == true)
+            {
+                listado = RolesBLL.GetList(e => e.FechaCreacion.Date >= FechaDesdeDateTimePicker.Value.Date && e.FechaCreacion.Date <= FechaHastaDateTimePicker.Value.Date);
+            }
+
+            if (ActivoRadioButton.Checked == true)
+            {
+                listado = RolesBLL.GetList(e => e.esActivo == true);
+            }
+
+            if (InactivoRadioButton.Checked == true)
+            {
+                listado = RolesBLL.GetList(e => e.esActivo == false);
+            }
+            /*//ninguno seleccionado
             if (UsarFechaCheckBox.Checked == false && CriterioTextBox.Text == string.Empty && TodosRadioButton.Checked == false && ActivoRadioButton.Checked == false && InactivoRadioButton.Checked == false)
             {
                 listado = RolesBLL.GetList(e => true);
@@ -219,7 +252,7 @@ namespace ProyectoTarea6.UI.Consultas
                     listado = RolesBLL.GetList(c => c.esActivo == true && c.FechaCreacion.Date >= FechaDesdeDateTimePicker.Value.Date && c.FechaCreacion.Date <= FechaHastaDateTimePicker.Value.Date);
                 }
             }
-            if (UsarFechaCheckBox.Checked != false && CriterioTextBox.Text != string.Empty && TodosRadioButton.Checked == false && ActivoRadioButton.Checked == false && InactivoRadioButton.Checked != false)
+            if (UsarFechaCheckBox.Checked != false && CriterioTextBox.Text != string.Empty || CriterioTextBox.Text == string.Empty && FiltroComboBox.Text != string.Empty && TodosRadioButton.Checked == false && ActivoRadioButton.Checked == false && InactivoRadioButton.Checked != false)
             {
                 if (!string.IsNullOrEmpty(CriterioTextBox.Text) && InactivoRadioButton.Checked == true)
                 {
@@ -237,9 +270,10 @@ namespace ProyectoTarea6.UI.Consultas
                 }
                 else
                 {
+                    MessageBox.Show("Pase por aqui lo ultimio.", "Pasando");
                     listado = RolesBLL.GetList(c => c.esActivo == false && c.FechaCreacion.Date >= FechaDesdeDateTimePicker.Value.Date && c.FechaCreacion.Date <= FechaHastaDateTimePicker.Value.Date);
                 }
-            }
+            }*/
 
             DatosDataGrid.DataSource = null;
             DatosDataGrid.DataSource = listado;
